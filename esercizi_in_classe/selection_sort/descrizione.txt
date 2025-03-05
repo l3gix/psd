@@ -1,0 +1,32 @@
+tre funzioni 
+input_array();
+ordina();
+output_array();
+
+
+trovo il minimo e poi ordino e tengo conto degli elementi che tolgono
+
+
+altre funzioni 
+
+min();
+scambia();
+
+Esempio di analisi 
+
+Analisi 
+dati in ingresso : 
+    precondizione
+dati di uscita : 
+    postcondizione 
+
+dizionario dei dati 
+
+identificatore | tipo | descrizione 
+a                array  array di interi 
+
+
+
+10 11 12 13 n = 4 
+
+11 12 13 
