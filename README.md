@@ -1,4 +1,4 @@
-# psd
+# Programmazione e Strutture Dati
 
 Esercizi In laboratorio
 
