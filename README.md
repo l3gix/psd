@@ -1,5 +1,5 @@
 # Programmazione e Strutture Dati
 
-Esercizi In laboratorio
+Esercizi in laboratorio
 
 Esercizi in Classe
