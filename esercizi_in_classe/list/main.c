@@ -5,8 +5,8 @@
 
 int main(void){
 	
-	int n=5;
-	Item a;
+	int n=5,pos;
+	Item a,cerca;
 	List l = newList();
 	for(int i = 0 ; i < n ; i++)
 	{
@@ -14,10 +14,18 @@ int main(void){
 		addHead(l,a);
 	}
 	printList(l);
-	printf("\nElemento cancella \n");
-	outputItem(removeHead(l));
+	printf("\nInserisci elemento da cercare : \n");
+	a = inputItem();
+	cerca = removeListItem(l,a);
+	if(cerca != NULL ) 
+	{
+		printf("\nElemento eliminato\n");
+		outputItem(cerca);
+	}
 	printf("\n");
 	printList(l);
+	printf("\n");
+
 
 	return 0;
 }

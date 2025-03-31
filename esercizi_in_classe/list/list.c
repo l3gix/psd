@@ -75,3 +75,70 @@ void printList(List l)
     }
 }
 
+
+
+Item searchListItem(List l, Item i, int *pos)
+{   
+    *pos = 0;
+    struct node *p;
+    for(p = l->head ; p != NULL ; p=p->next)
+    {
+        if(cmpItem(i,p->value) == 0)return p->value;
+
+
+        (*pos)++;
+    }
+
+    (*pos) = -1;
+    return NULL;
+}
+
+
+Item removeListItem(List l, Item i)
+{
+
+    struct node *p,*prev;
+    Item r;//item da ritornare 
+
+    if(isEmpty(l)) return NULL;
+
+    for(p = l->head ; p != NULL,prev = p ; p=p->next)
+    {
+        if(cmpItem(i,p->value) == 0)
+        {
+            if(p = l->head)return removeHead(l);
+            prev->next = p->next;//agiorna il puntatore 
+            r = p->value;
+            free(p);
+            l->size--;
+            return r;
+        }
+    }
+
+    return NULL;
+}
+
+Item removeListPos(List l, int pos)
+{
+    struct node *p,*prev;
+    Item r;//item da ritornare 
+    int cont  = 0;
+
+    if(isEmpty(l) || pos <0 || pos >= l->size) return NULL;
+
+    for(p = l->head ; p != NULL,prev = p ; p=p->next)
+    {
+        if(cont == pos)
+        {
+            if(p = l->head)return removeHead(l);
+            prev->next = p->next;//agiorna il puntatore 
+            r = p->value;
+            free(p);
+            l->size--;
+            return r;
+        }
+    }
+
+    return NULL;
+}
+
