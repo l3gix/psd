@@ -1,0 +1,4 @@
+3
+Italo Calvino;Il barone rampante;Einaudi;1957
+George Orwell;1984;Secker & Warburg;1949
+J.K. Rowling;Harry Potter;Bloomsbury;1997

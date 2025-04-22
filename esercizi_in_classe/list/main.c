@@ -14,18 +14,19 @@ int main(void){
 		addHead(l,a);
 	}
 	printList(l);
-	printf("\nInserisci elemento da cercare : \n");
-	a = inputItem();
-	cerca = removeListItem(l,a);
-	if(cerca != NULL ) 
-	{
-		printf("\nElemento eliminato\n");
-		outputItem(cerca);
-	}
-	printf("\n");
-	printList(l);
-	printf("\n");
+	//printf("\nInserisci posizione in cui vuoi aggiungere l'Item: \n");
+	//scanf("%d",&pos);
 
+	//printf("Inserisci l'item : ");
+	//a = inputItem();
+
+	//addListPos(l,a,pos);
+	//addListTail(l,a);
+	List clone = cloneList(l) ;
+
+	printf("\nClone\n");
+	printList(clone);
 
 	return 0;
 }
+

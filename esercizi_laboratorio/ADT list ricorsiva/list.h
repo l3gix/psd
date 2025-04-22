@@ -13,9 +13,14 @@ void printList(List);
 Item searchListItem(List, Item, int *);
 Item removeListItem(List, Item);
 Item removeListPos(List, int);
-
 int addListPos(List, Item, int);
 int addListTail(List, Item);
 void reverseList(List);
 List cloneList(List);
 List cloneListItem(List);
+
+
+void printListRec(List list);
+Item searchListRec(List list , Item item,int *pos);
+int countItemListRec(List list , Item item);
+void destroyListRec(List list);

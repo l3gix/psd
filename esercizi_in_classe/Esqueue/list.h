@@ -13,7 +13,6 @@ void printList(List);
 Item searchListItem(List, Item, int *);
 Item removeListItem(List, Item);
 Item removeListPos(List, int);
-
 int addListPos(List, Item, int);
 int addListTail(List, Item);
 void reverseList(List);

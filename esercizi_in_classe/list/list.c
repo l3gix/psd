@@ -142,3 +142,65 @@ Item removeListPos(List l, int pos)
     return NULL;
 }
 
+int addListPos(List l, Item e, int pos)
+{
+    struct node *p;
+    int c = 0;
+
+    if(pos < 0 || pos > l->size)return 0;
+
+    for(p = l->head ; c < pos-1 ; p=p->next,c++); // serve solo per arrivare all 'elemento
+
+
+    // nel caso in cui la pos conincide con la testa 
+    if(pos == 0) 
+    {
+        addHead(l,e); 
+        return 1;
+    } 
+
+    struct node *n = malloc(sizeof(struct node));
+
+    n->value = e;
+    n->next = p->next;
+    p->next = n;
+
+    l->size++;
+
+    return 1;
+
+}
+
+int addListTail(List l, Item e)
+{
+    return addListPos(l,e,l->size);
+    
+}
+
+void reverseList(List l)
+{
+	struct node *p,*prev,*temp;
+	
+    for(p = l->head, prev=NULL ; p != NULL,prev = p ; p = temp)
+    {
+        temp = p->next;
+        p->next = prev;
+    }
+
+    l->head = prev;
+
+}
+
+
+List cloneList(List l)
+{
+    List clone = newList();
+    struct node *p;
+
+    for(p = l->head ; p != NULL ; p = p->next);
+    {
+        addListTail(clone,p->value);
+    }
+
+    return clone;
+}
