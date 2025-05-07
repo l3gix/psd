@@ -5,7 +5,6 @@
 struct list{
 	int size;
 	struct node *head;
-	struct node *tail;
 };
 
 struct node{
@@ -17,7 +16,6 @@ List newList(){
 	List l=malloc(sizeof(struct list));
 	l->size=0;
 	l->head=NULL;
-	l->tail=NULL;
 	return l;
 }
 
@@ -49,7 +47,6 @@ Item removeHead(List l){
 	Item tmp=t->value;
 	free(t);
 	(l->size)--;
-	if(l->size == 0) l->tail = NULL;
 	return tmp;
 }
 
@@ -164,23 +161,7 @@ int addListPos(List l, Item e, int pos)
 
 int addListTail(List l, Item e)
 {
-	//return addListPos(l,e,l->size);
-	struct node *new = malloc(sizeof(struct node));
-	new-> next = NULL;
-	new-> value = e;
-	if(l->size == 0)
-	{
-		l->head = new;
-	}else 
-	{
-		l->tail->next = new;
-	}
-	
-	l->tail = new;
-
-	l->size++;
-
-	return 1;
+	return addListPos(l,e,l->size);
 }
 
 void reverseList(List l)
