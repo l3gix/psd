@@ -20,11 +20,23 @@ void eveLevel(List l,BTree t);
 
 
 // cera un nodo nell 'albero 
+//search:
+//	descrizione: dato un elemento lo cerca all'interno dell'albero, se è presenta ritorna vero se no ritorna falso
+//	precondizione: l'elemento da cercare non deve essere nullo
+//  postcondizione: se trova l'elemento ritorna 1, se no richiama dinuovo se stessa sul sottoalbero sinistro, se non lo trova 
+//					si richiama sul sottoalbero destro, se non lo trova nemmeno li restituisce 0 se no restituisce 1.
 int search(BTree t,Item e);
 
 // cerca il max nodo 
+// descrizione: funzione ricorsiva, chiamata dalla funzione MaxItem. Divide l'albero in destra e sinistra
+// 			 e per ogni lato viene chiamata di nuovo MaxItem. 
+// precondizione: 
+// postcondizione: ritorna il contenuto più grande.
 Item maxNode(BTree t);
 
+//	precondizione: nessuna
+//	postcondizione: se albero vuoto la lista sarà vuota. 
+//					Se l'albero è pieno, inserisci in una lista il contenuto dei nodi che si trovano nei livelli pari
 int cmpTree(BTree a,BTree b);
 
 int main(void){
