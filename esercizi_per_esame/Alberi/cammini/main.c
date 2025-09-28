@@ -38,7 +38,7 @@ int high(BTree t)
 	
 	complessita high chiamata due volte quindi O(n^2);
 	e la singola chiamata ricorsiva maxPath quindi lineare O(n);
-	in totale la complessita e O(n) + O(n^2) + c 
+	quindi la complessita nel caso peggiore e O(n^2)
 
 */
 void maxPath(BTree t,Queue q)
